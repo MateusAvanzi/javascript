@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de leitura Bíblia</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Plano de leitura Bíblia</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Escolha seu plano de leitura</p>
+            <input type="button" value="1 ano" id="btn-1ano" class="txtnum">
+            <input type="button" value=" 180 dias" id="btn-180dias" class="txtnum">
+            <input type="button" value="90 dias" id="btn-90dias" class="txtnum"> 
+            <input type="button" value="2 anos" id="btn-2anos" class="txtnum">
+            <br>
+            <label for="txtnum">Número de dias:</label>
+            <input type="number" id="txtnum" name="txtnum">
+            <button id="btn-calcular" class="btn-calcular" onclick="calcular()">Calcular</button> 
+        </div>
+                 
+        <div id="res">
+        
+        </div>
+     </section>
+
+    <footer>
+        <p>&copy; Mateus Avanzi</p>
+    </footer> 
+
+ <script src="script.js"></script>  
+</body>
+</html>

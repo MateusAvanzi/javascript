@@ -1,0 +1,63 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    }
+    
+    /* Estilos do cabeçalho */
+    header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    }
+    
+    h1 {
+    margin: 0;
+    }
+    
+    /* Estilos do conteúdo */
+    section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px);
+    }
+    
+    section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    }
+    
+    #cronometro {
+    font-size: 3rem;
+    margin: 0;
+    }
+    
+    input[type="button"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    }
+    
+    input[type="button"]:hover {
+    background-color: #444;
+    }
+    
+    /* Estilos do rodapé */
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    }
+    
+    p {
+    margin: 0;
+    }

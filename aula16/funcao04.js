@@ -1,9 +1,11 @@
 function fatorial(n) {
-    let res = 1
-    for(let c = n; c > 1; c= c-1) {
-        res = res * c
+    let fat = 1
+
+    for (let c = n; c > 1; c --) {
+        fat *= c
+
     }
-    return res
+    return fat
 }
 console.log(fatorial(5))
 

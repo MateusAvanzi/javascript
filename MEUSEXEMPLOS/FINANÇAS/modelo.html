@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Finanças Pessoais</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Gerenciador de Finanças Pessoais</h1>
+   
+
+    <h2>Controle de despesas</h2>
+ 
+
+    <div>
+       
+ 
+      <label for="Aliemtaçao">Alimetação</label>  <input type="number" name="" id="Alimentação">
+       <label for="transporte">Transporte</label> <input type="number" name="" id="Transporte">
+       <label for="">Saude</label> <input type="number" name="" id="Saude">
+       <label for="">Lazer</label> <input type="number" name="" id="Lazer">
+
+<br>
+   <input type="button" value="Adicionar" onclick="adicionarD()">
+
+    
+    <hr>
+
+    <h2>Controle de receitas</h2>
+  
+
+    <div>
+        <label for="Salário">Salário:</label> <input type="number" name="" id="txtsalario">
+        <label for="Renda">Renda Extra:</label>  <input type="number" name="" id="txtrenda">
+        <label for="Investimetnos">Investimentos:</label>  <input type="number" name="" id="txtinvestimentos">
+        
+ <br>
+  
+    <input type="button" id="btnAddIncome" value="Adicionar" onclick="adicionarR()">
+    <hr>
+       
+</div>
+<input type="button" value="Gerar Relatorio" onclick="gerar()">
+
+<div id="res">
+
+
+
+</div>
+
+<script src="script.js"></script>  
+
+</body>
+
+</html>

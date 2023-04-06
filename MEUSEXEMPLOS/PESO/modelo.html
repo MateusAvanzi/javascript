@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresso de Peso</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Progresso de Peso</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="lbPeso">Peso atual (Kg)</label> <br>
+            <input type="number" id="nPeso">
+            <hr>
+
+            <label for="pesoDesejadoInput">Peso desejado (kg):</label>
+            <input type="number" id="pesoDesejadoInput" required>
+            <hr>
+
+        </div>
+        <div id="res">
+            <div id="res">
+                <p>Peso atual: <span id="pesoAtual"></span></p>
+                <p>Peso desejado: <span id="pesoDesejadoSpan"></span></p>
+                <p>Progresso: <span id="progresso"></span></p>
+            </div>
+        </div>
+     </section>
+
+    <footer>
+        <p>&copy; Mateus Avanzi</p>
+    </footer> 
+
+    <script src="script.js"></script>  
+    <script>
+        const pesoAtual = document.getElementById('nPeso');
+        const pesoDesejado = document.getElementById('pesoDesejadoInput');
+        const pesoAtualElement = document.getElementById('pesoAtual');
+        const pesoDesejadoElement = document.getElementById('pesoDesejadoSpan');
+        const progressoElement = document.getElementById('progresso');
+        
+        pesoAtual.addEventListener('input', () => {
+            const pesoAtualValor = Number(pesoAtual.value);
+            const pesoDesejadoValor = Number(pesoDesejado.value);
+            const progresso = pesoDesejadoValor - pesoAtualValor;
+
+            pesoAtualElement.textContent = `${pesoAtualValor} kg`;
+            pesoDesejadoElement.textContent = `${pesoDesejadoValor} kg`;
+            progressoElement.textContent = `${progresso.toFixed(2)} Kg`;
+        });
+    </script>
+</body>
+</html>

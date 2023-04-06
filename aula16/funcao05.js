@@ -11,3 +11,5 @@ console.log(fatorial(5))
 // 5! = 4!
 
 // n! = (n-1)!
+
+
