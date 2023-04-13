@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<h1>Lista de Tarefas</h1>
+	
+	<!-- formulário para adicionar tarefas -->
+	<form>
+		<label for="tarefa">Adicionar Tarefa:</label>
+		<input type="text" id="tarefa">
+		<button type="button" onclick="adicionarTarefa()">Adicionar</button>
+	</form>
+
+	<!-- lista de tarefas -->
+	<ul id="lista-tarefas">
+		<!-- tarefas serão adicionadas aqui -->
+	</ul>
+
+	<script>
+		// variável para guardar a lista de tarefas
+		let tarefas = [];
+
+		// função para adicionar tarefa
+		function adicionarTarefa() {
+			// obter a tarefa do input
+			let novaTarefa = document.getElementById("tarefa").value;
+
+			// adicionar a tarefa na lista de tarefas
+			tarefas.push({texto: novaTarefa, concluida: false});
+
+			// atualizar a lista de tarefas
+			atualizarListaTarefas();
+		}
+
+		// função para atualizar a lista de tarefas
+		function atualizarListaTarefas() {
+			// obter a lista de tarefas
+			let listaTarefas = document.getElementById("lista-tarefas");
+
+			// limpar a lista de tarefas
+			listaTarefas.innerHTML = "";
+
+			// iterar sobre a lista de tarefas
+			tarefas.forEach(function(tarefa, index) {
+				// criar um elemento li para a tarefa
+				let itemLista = document.createElement("li");
+
+				// adicionar o texto da tarefa ao elemento li
+				itemLista.textContent = tarefa.texto;
+
+				// adicionar um evento de clique no elemento li
+				itemLista.addEventListener("click", function() {
+					// marcar a tarefa como concluída
+					tarefa.concluida = !tarefa.concluida;
+
+					// atualizar a lista de tarefas
+					atualizarListaTarefas();
+				});
+
+				// se a tarefa estiver concluída, adicionar uma classe CSS para riscá-la
+				if (tarefa.concluida) {
+					itemLista.classList.add("concluida");
+				}
+
+				// adicionar o elemento li à lista de tarefas
+				listaTarefas.appendChild(itemLista);
+			});
+		}
+	</script>
+
+	<!-- estilo CSS para riscar as tarefas concluídas -->
+	<style>
+		.concluida {
+			text-decoration: line-through;
+		}
+	</style>
+</body>
+</html>

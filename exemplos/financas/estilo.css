@@ -1,0 +1,115 @@
+/* Estilo geral */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  color: #004080;
+  margin-top: 50px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+form {
+  margin: 50px auto 0;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="number"],
+input[type="date"] {
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  width: 200px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+table {
+  margin-top: 50px;
+  margin-right: 20px;
+  background-color: #fff;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+
+  position: relative; /* troque para relative */
+  margin: 50px auto; /* centralize horizontalmente */
+  margin-top: 20px; /* adicione margem superior */
+
+  
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #004080;
+  color: #fff;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+/* Estilo responsivo */
+
+@media (max-width: 768px) {
+  form {
+    margin: 20px;
+  }
+
+  input[type="number"],
+  input[type="date"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  table {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+}

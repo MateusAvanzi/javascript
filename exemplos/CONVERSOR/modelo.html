@@ -1,41 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Unidades</title>
+    <title>Conversor de medidas</title>
     <link rel="stylesheet" href="estilo.css">
-</head>
+  </head>
 <body>
-    <header>
-        <h1>Conversor de Unidades</h1>
-    </header>
+	<h1>Conversor de Medidas</h1>
+	<label for="input-cm">Insira um número em cm:</label>
+	<input type="number" id="input-cm" placeholder="Insira um número em cm">
+	<div id="output-metros"></div>
 
-    comprimento, massa, temperatura, volume, velocidade
+	<label for="input-cel">Insira a temperetaura em Graus Celsius:</label>
+	<input type="number" id="input-cel" placeholder="Insira a temperatura em ºC">
+	<div id="output-fah"></div>
 
-    <section>
-        <div>
-            <label for="">Moeda</label>
-            <input type="number" name="" id="">
+    <label for="input-gra">Insira a massa em gramas:</label>
+	<input type="number" id="input-gra" placeholder="Insira a massa em gramas">
+	<div id="output-kg"></div>
 
+    <label for="input-met">Insira a velocidade em m/s:</label>
+	<input type="number" id="input-met" placeholder="Insira a velocidade em m/s:">
+	<div id="output-kil"></div>
 
+	<script>
+		const inputCm = document.getElementById('input-cm');
+		const outputMetros = document.getElementById('output-metros');
+		const inputCel = document.getElementById('input-cel');
+		const outputFah = document.getElementById('output-fah');
+        const inputGra = document.getElementById('input-gra');
+		const outputKilo = document.getElementById('output-kg');
+        const inputMet = document.getElementById('input-met');
+		const outputKil = document.getElementById('output-kil');
 
-            <label for="metros">M</label>
-            <input type="number" name="" id="">
+		inputCm.addEventListener('input', () => {
+		  const cm = parseFloat(inputCm.value);
+		  const metros = cm / 100;
+		  outputMetros.textContent = metros + ' metros';
+		});
 
-            <input type="button" value="Converter">
-      
-        </div>
-        <div id="res">
-    
-        </div>
-     </section>
+		inputCel.addEventListener('input', () => {
+		  const celsius = parseFloat(inputCel.value);
+		  const fahrenheit = (celsius * 1.8) + 32;
+		  outputFah.textContent = fahrenheit + ' ºF';
+		});
 
-    <footer>
-        <p>&copy; Mateus Avanzi</p>
-    </footer> 
+        inputGra.addEventListener('input', () => {
+		  const gramas = parseFloat(inputGra.value);
+		  const kilo = gramas / 1000
+		  outputKilo.textContent = kilo + ' kG';
+		});
 
- <script src="script.js"></script>  
+        inputMet.addEventListener('input', () => {
+		  const metros = parseFloat(inputMet.value);
+		  const quilometro = metros * 3.6;
+		  outputKil.textContent = quilometro + ' km/h';
+		});
+	</script>
 </body>
 </html>

@@ -1,26 +1,52 @@
-
-body{
-    background  : '#262624';
-    font: normal 15pt arial;
-}
-header {
-    color: white;
-    text-align: center;
-
-}
-
-section {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 500px;
-    margin: auto;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.384);
-}
-
-footer {
-    color: white;
-    text-align: center;
-    font-style: italic;
-
-}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .output {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  #output-metros::before {
+    content: "Metros: ";
+  }
+  
+  #output-fah::before {
+    content: "Fahrenheit: ";
+  }
+  
+  #output-kg::before {
+    content: "Kilogramas: ";
+  }
+  
+  #output-kil::before {
+    content: "Km/h: ";
+  }
+  
